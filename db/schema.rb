@@ -10,12 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_20_073515) do
+ActiveRecord::Schema.define(version: 2021_03_20_105019) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "parkings", force: :cascade do |t|
+    t.string "station"
+    t.integer "vehicle_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "records", force: :cascade do |t|
+    t.integer "booked_tickets"
+    t.integer "number_of_motorcars"
+    t.integer "number_of_motorbikes"
+    t.integer "number_of_bicycles"
+    t.datetime "hourly_index"
+    t.bigint "stations_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["stations_id"], name: "index_records_on_stations_id"
+  end
+
+  create_table "stations", force: :cascade do |t|
+    t.string "station_name"
+    t.integer "total_spaces_motorbikes"
+    t.integer "total_spaces_bicycles"
+    t.integer "total_spaces_motorcars"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

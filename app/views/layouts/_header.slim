@@ -1,0 +1,28 @@
+
+nav.navbar.has-background-black role="navigation" aria-label="main navigation"
+  div.navbar-brand
+    = link_to "BMP", root_path, class: "has-text-white is-size-4 p-2"
+
+    a.navbar-burger role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"
+      span aria-hidden="true"
+      span aria-hidden="true"
+      span aria-hidden="true"
+
+  .navbar-menu
+    .navbar-start
+
+      .navbar-item.has-dropdown.is-hoverable
+        a.navbar-link.has-text-white More
+        .navbar-dropdown
+          = link_to "Contact us", contact_us_path, class: "navbar-item" 
+          = link_to "about us", about_us_path, class: "navbar-item" 
+          hr.navbar-divider
+          = link_to "privacy policy", privacy_policy_path, class: "navbar-item"
+          = link_to "terms and conditions", terms_and_conditions_path, class: "navbar-item" 
+            
+
+    .navbar-end
+      .navbar-item
+        .buttons
+          = link_to "Sign up", new_user_registration_path, class: "button"
+          = link_to "Log in", new_user_session_path, class: "button is-light"

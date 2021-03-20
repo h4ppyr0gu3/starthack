@@ -14,5 +14,5 @@
  *= require_self
  */
 
-@import 'bootstrap/scss'
-@import 'custom'
+@import 'bootstrap'
+/*@import 'custom'*/

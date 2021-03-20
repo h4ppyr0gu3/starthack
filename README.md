@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Due to improve over the course of the hackathon
 
-Things you may want to cover:
+* Ruby version 3.0.0
 
-* Ruby version
-
-* System dependencies
+* System dependencies located in Gemfile
 
 * Configuration
 
-* Database creation
+* Database creation in postgres
 
 * Database initialization
 
-* How to run the test suite
+* Test suite absent due to time constraints
 
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+* Deployment on localhost on port :3000
 
 * ...

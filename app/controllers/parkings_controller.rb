@@ -1,6 +1,6 @@
 class ParkingsController < ApplicationController
   before_action :set_parking, only: %i[ show edit update destroy ]
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
   attr_reader :value
 
   

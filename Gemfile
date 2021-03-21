@@ -28,6 +28,10 @@ gem 'sassc-rails'
 
 gem 'slim'
 
+gem 'bootstrap_progressbar'
+
+
+
 # gem 'bootstrap'
 
 # Use Redis adapter to run Action Cable in production

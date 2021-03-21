@@ -1,21 +1,61 @@
 
-
+<div class="">
 <%= form_with url: "/find_parking", method: :post do |form| %>
-	<%= form.label :vehicle_type, "Vehicle description" %>
-	<%= form.label :motorcycle %>
-	<%= form.radio_button :vehicle_type, "motorcycle" %>
-	<%= form.label :bicycle %>
-	<%= form.radio_button :vehicle_type, "bicycle" %>
-	<%= form.label :motorvehicle %>
-	<%= form.radio_button :vehicle_type, "motorvehicle" %>
-	<%= form.label :Station %>
-	<%= form.select :station, ["ShopVille-Zurich main ", "Bern station", "Basel SBB station", "Geneva Cornavin station", "Lucerne station", "Aarau station", "Baden station", "Bellinzona station", "Biel/Bienne station", "Brig station", "Chur station", "Delémont station", "Fribourg/Freiburg station", "Geneva Airport station", "Genève Eaux-Vives station", "Lausanne station", "Locarno station", "Lugano station", "Montreux station", "Neuchâtel station", "Olten station", "Schaffhausen station", "Sion station", "Solothurn station", "St. Gallen station", "Thun station", "Uster station", "Visp station", "Wil station", "Winterthur station", "Yverdon-les-Bains station", "Zug station", "Zurich Enge station", "Zurich Oerlikon station", "Zurich Stadelhofen station"] %>
-	<%= form.label :date %>
-	<%= form.select :date, [Date.today, Date.today.next_day, Date.today.next_day(2), Date.today.next_day(3), Date.today.next_day(4), Date.today.next_day(5)] %>
-	<%= form.label :hour %>
-	<%= form.select :hour, ["00:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00", ] %>
-	<%= form.submit :Submit %>
+	<ul>
+		<!-- <li> -->
+			<div class="row">
+				<div class="col-12 d-flex justify-content-center">
+					<%= form.label :vehicle_type, "" %>
+				</div>
+				<div class="col-12 d-flex justify-content-center">
+					<ul>
+				<!-- </li> -->
+						<li>
+							<%= form.radio_button :vehicle_type, "motorcycle", class: "form-check-input" %>
+							<%= form.label :motorcycle, class: "form-check-label" %>
+						</li>
+						<!-- </div>
+						<div class="col-12 d-flex justify-content-center"> -->
+						<li>
+							<%= form.radio_button :vehicle_type, "bicycle", class: "form-check-input" %>
+							<%= form.label :bicycle, class: "form-check-label" %>
+						</li>
+						<!-- </div>
+						<div class="col-12 d-flex justify-content-center"> -->
+						<li>
+							<%= form.radio_button :vehicle_type, "motorvehicle", class: "form-check-input" %>
+							<%= form.label :motorvehicle, class: "form-check-label" %>
+						</li>
+						</div>
+					</ul>
+				<div class="col-12 d-flex justify-content-center">
+			<!-- </ul> -->
+				<dt>
+					<%= form.label :Station %>
+					<%= form.select :station, ["ShopVille-Zurich main ", "Bern station", "Basel SBB station", "Geneva Cornavin station", "Lucerne station", "Aarau station", "Baden station", "Bellinzona station", "Biel/Bienne station", "Brig station", "Chur station", "Delémont station", "Fribourg/Freiburg station", "Geneva Airport station", "Genève Eaux-Vives station", "Lausanne station", "Locarno station", "Lugano station", "Montreux station", "Neuchâtel station", "Olten station", "Schaffhausen station", "Sion station", "Solothurn station", "St. Gallen station", "Thun station", "Uster station", "Visp station", "Wil station", "Winterthur station", "Yverdon-les-Bains station", "Zug station", "Zurich Enge station", "Zurich Oerlikon station", "Zurich Stadelhofen station"], class: "form-select" %>
+				</dt>
+				</div>
+				<div class="col-12 m-2 d-flex justify-content-center">
+				<dt>
+					<%= form.label :date, class: "m-2"%>
+					<%= form.select :date, [Date.today, Date.today.next_day, Date.today.next_day(2), Date.today.next_day(3), Date.today.next_day(4), Date.today.next_day(5)], class: "form-select m-2" %>
+				</dt>
+				<!-- </div> -->
+				<!-- <div class="col-12 d-flex justify-content-center"> -->
+				<dt>
+					<%= form.label :hour, class: "m-2" %>
+					<%= form.select :hour, ["00:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00", ], class: "form-select m-2", selected: "12:00" %>
+				</dt>
+				</div>
+				<div class="col-12 d-flex justify-content-center">
+				<!-- <li> -->
+					<%= form.submit :Submit, class: "btn btn-outline-primary" %>
+				</div>
+			</div>
+		<!-- </li> -->
+	</ul>
 
 
 	
 <% end %>
+</div>

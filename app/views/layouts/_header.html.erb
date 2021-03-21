@@ -1,0 +1,49 @@
+<!-- 
+/ nav.navbar.has-background-black role="navigation" aria-label="main navigation"
+/   div.navbar-brand
+/     = link_to "BMP", root_path, class: "has-text-white is-size-4 p-2"
+
+/     a.navbar-burger role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"
+/       span aria-hidden="true"
+/       span aria-hidden="true"
+/       span aria-hidden="true"
+
+/   .navbar-menu
+/     .navbar-start
+
+/       .navbar-item.has-dropdown.is-hoverable
+/         a.navbar-link.has-text-white More
+/         .navbar-dropdown
+/           = link_to "Contact us", contact_us_path, class: "navbar-item" 
+/           = link_to "about us", about_us_path, class: "navbar-item" 
+/           hr.navbar-divider
+/           = link_to "privacy policy", privacy_policy_path, class: "navbar-item"
+/           = link_to "terms and conditions", terms_and_conditions_path, class: "navbar-item" 
+            
+
+/     .navbar-end
+/       .navbar-item
+/         .buttons
+/           = link_to "Sign up", new_user_registration_path, class: "button"
+/           = link_to "Log in", new_user_session_path, class: "button is-light" -->
+
+
+<header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-body border-bottom shadow-sm">
+  <%= link_to "BMP/ Book My Parking", root_path, class: "h5 my-0 me-md-auto fw-normal font-weight-bold text-dark" %>
+  <nav class="my-2 my-md-0 me-md-3">
+    <!-- <a class="p-2 text-dark" href="#">About us</a> -->
+    <%= link_to "about us", about_us_path, class: "p-2 text-dark" %>
+    <%= link_to "privacy policy", privacy_policy_path, class: "p-2 text-dark" %>
+    <%= link_to "terms and conditions", terms_and_conditions_path, class: "p-2 text-dark" %> 
+    <%= link_to "Contact us", contact_us_path, class: "navbar-item" %>
+
+
+
+    <!-- <a class="p-2 text-dark" href="#">Privacy and policy</a> -->
+    <!-- <a class="p-2 text-dark" href="#">Terms and conditions</a> -->
+    <a class="p-2 text-dark" href="#">Pricing</a>
+    <!-- <a class="p-2 text-dark" href="#">Contact us</a> -->
+  </nav>
+  <%= link_to "Sign up", new_user_registration_path, class: "btn btn-outline-primary" %>
+  <!-- <a class="btn btn-outline-primary" href="#">Sign up</a> -->
+</header>

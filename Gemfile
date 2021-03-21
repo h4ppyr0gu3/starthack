@@ -24,9 +24,11 @@ gem 'bootstrap-sass'
 
 gem 'sassc-rails'
 
-gem 'jquery-rails'
+# gem 'jquery-rails'
 
 gem 'slim'
+
+# gem 'bootstrap'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

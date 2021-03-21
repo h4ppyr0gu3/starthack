@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get "privacy_policy", to: "static_pages#privacy_policy"
   get "about_us", to: "static_pages#about_us"
   get "add_choices", to: "parkings#choose"
+  get "parking_availability", to: "parkings#parking"
+  post "find_parking", to: "parkings#find_parking"
   # get "choose", to: "parkings"
 
 end

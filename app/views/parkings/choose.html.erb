@@ -10,6 +10,11 @@
 	<%= form.radio_button :vehicle_type, "motorvehicle" %>
 	<%= form.label :Station %>
 	<%= form.select :station, ["ShopVille-Zurich main ", "Bern station", "Basel SBB station", "Geneva Cornavin station", "Lucerne station", "Aarau station", "Baden station", "Bellinzona station", "Biel/Bienne station", "Brig station", "Chur station", "Delémont station", "Fribourg/Freiburg station", "Geneva Airport station", "Genève Eaux-Vives station", "Lausanne station", "Locarno station", "Lugano station", "Montreux station", "Neuchâtel station", "Olten station", "Schaffhausen station", "Sion station", "Solothurn station", "St. Gallen station", "Thun station", "Uster station", "Visp station", "Wil station", "Winterthur station", "Yverdon-les-Bains station", "Zug station", "Zurich Enge station", "Zurich Oerlikon station", "Zurich Stadelhofen station"] %>
+	<%= form.label :date %>
+	<%= form.select :date, [Date.today, Date.today.next_day, Date.today.next_day(2), Date.today.next_day(3), Date.today.next_day(4), Date.today.next_day(5)] %>
+	<%= form.label :hour %>
+	<%= form.select :hour, ["00:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00", ] %>
+	<%= form.submit :Submit %>
 
 
 	

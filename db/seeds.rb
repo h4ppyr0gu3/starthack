@@ -13,7 +13,7 @@ stations = ["ShopVille-Zurich main ", "Bern station", "Basel SBB station", "Gene
 
 stations.each_with_index do |s, idx|
 	# rand(150)
-	cars = rand(200)
+	cars = rand(150..200)
 	bikes = rand(20)
 	motorbikes = rand(15)
 	Station.create(station_name: s, total_spaces_motorbikes: motorbikes, total_spaces_motorcars: cars, total_spaces_bicycles: bikes)
